@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Aurelia Babel SystemJS</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://frontendcreator.com/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  </head>
+  <body aurelia-app="main">
+    <h1>Loading...</h1>
+    
+    <script src="https://unpkg.com/systemjs@0.19.41/dist/system.js"></script>
+    <!-- The following loads the standard dependencies -->
+    <script src="systemjs.config.js"></script>
+    <script>
+      // This script loads any custom dependencies. These are the dependencies that are unique to 
+      // a given project.
+      System.config({
+        // map tells the System loader where to look for things
+        map: {
+          // Custom Dependencies - these vary per project
+          'bootstrap':                  'npm:bootstrap@3.3.7',  
+        },
+        // packages tells the System loader how to load when no filename and/or no extension
+        packages: {
+          bootstrap: {
+            defaultExtension: 'css',
+            meta: {
+              '*.css': {
+                loader: 'plugin-css'
+              },
+              '*.js': {
+                loader: 'systemjs-loader.js'
+              },
+            }
+          },
+        }        
+      });
+    </script>    
+  </body>
+</html>
