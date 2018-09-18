@@ -5,13 +5,13 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav navbar-dark mr-lg-11">
         <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
         <!-- <li class="nav-item active"> -->
           <a class="nav-link" href.bind="row.href">${row.title} <span class="sr-only">(current)</span></a>
         </li>
       </ul>
-      <form class="mr-lg-0">
+      <form class="mr-lg-1">
         <span class="loader" if.bind="router.isNavigating">
           <i class="fa fa-spinner fa-spin fa-2x"></i>
         </span>
