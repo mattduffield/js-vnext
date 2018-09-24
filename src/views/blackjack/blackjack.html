@@ -1,0 +1,22 @@
+<template>
+  <require from="./blackjack.css"></require>
+  
+  <section class="view-section">
+    <h1>BlackJack</h1>
+    <div id="blackjack">
+      <div class="status hidden">nbsp;</div>
+      <div class="dealer">
+        <div class="hand"></div>
+        <div class="score hidden"></div>
+      </div>
+      <div class="player">
+        <div class="hand"></div>
+        <div class="score"></div>
+      </div>
+      <div class="buttons">
+        <button class="hit-me" click.delegate="hit()">Hit Me</button>
+        <button class="stay" click.delegate="stay()">Stay</button>
+      </div>
+    </div>
+  </section>
+</template>
