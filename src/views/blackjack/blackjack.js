@@ -94,7 +94,7 @@ export class Blackjack {
     return template.content.firstChild;
   }
   render(element, hand) {
-    element.querySelector('.hand').innerHTML = [...hand].map(this.templates.cardTemplate.bind(this)).join('');
+    element.querySelector('.hand').innerHTML = [...hand].map(this.templates.cardTemplate.bind(this.templates)).join('');
     element.querySelector('.score').innerHTML = this.cards.countHand(hand);
     this.updateLabel(element, hand);
   }

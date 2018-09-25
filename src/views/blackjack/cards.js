@@ -15,6 +15,9 @@ export class Cards {
     
   }
 
+  isFlipped(card) {
+    this.isCardFlipped.get(card);
+  }
   flipCardUp(card) {
     this.isCardFlipped.set(card, true);
   }
