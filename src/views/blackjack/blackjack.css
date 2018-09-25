@@ -52,6 +52,7 @@
   transition: all 0.6s;
   transform-style: preserve-3d;
 }
+.card:hover,
 .card.flipped {
   transform: rotateY(180deg);
 }
@@ -66,8 +67,8 @@
 .card .front {
   transform: rotateY(180deg);
 }
-.card .back {
-/* .card .front { */
+.card .back, 
+.card .front {
   backface-visibility: hidden;
   position: absolute;
   top: 2px; left: 2px; right: 2px; bottom: 2px;
@@ -81,8 +82,7 @@
 .hearts .front:after {
   color: red;
 }
-.card .front:before, 
-.card .front:after {
+.card .front:before, .card .front:after {
   content: attr(data-suit);
   position: absolute;
   font-size: 18px;
