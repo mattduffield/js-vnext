@@ -11,7 +11,34 @@
   transform: translate(1150px);
   /*opacity: 0;*/
 }
+/* Card */
 .card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.card.flipped {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.card .back {
+  background: #eaeaed;
+  color: #0087cc;
+  line-height: 150px;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+/* Card 2 */
+/* .card {
   margin: 0 5px;
   border: 1px solid #999;
   box-shadow: 0px 1px 3px #ccc;
@@ -30,7 +57,6 @@
 }
 .card.added {
   transform: translate(50px);
-  /*opacity: 0;*/
 }
 .card .back {
   background: #47B77E;
@@ -67,7 +93,8 @@
 .card .front:after {
   bottom: 0;
   right: 5px;
-}
+} */
+/* Score */
 .score {
   text-align: center;
   font-size: 28px;

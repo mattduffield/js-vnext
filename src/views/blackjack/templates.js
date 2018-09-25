@@ -17,15 +17,15 @@ export class Templates {
 
   getCssClass(card) {
     // console.log('isFlipped', this.cards.isFlipped(card));
-    return `card ${card.suit.toLowerCase()} ${this.cards.isCardFlipped.get(card) ? 'flipped' : ''}`;
-    // return `card ${card.suit.toLowerCase()} ${this.cards.isCardFlipped.get(card) && 'flipped'}`;
+    // return `card ${card.suit.toLowerCase()} ${this.cards.isCardFlipped.get(card) ? 'flipped' : ''}`;
+    return `card ${card.suit.toLowerCase()} ${this.cards.isCardFlipped.get(card) && 'flipped'}`;
   }
 
   cardTemplate(card) {
     return `<div
       class="${this.getCssClass(card)}">
-      <div class="back">\uD83D\uDC09</div>
-      <div class="front" data-suit="${this.suitIcon(card)}" data-face="${card.face}">
+      <div class="side back">\uD83D\uDC09</div>
+      <div class="side front" data-suit="${this.suitIcon(card)}" data-face="${card.face}">
         ${card.face}
       </div>
     </div>`;
