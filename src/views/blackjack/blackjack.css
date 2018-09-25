@@ -52,12 +52,19 @@
   transition: all 0.6s;
   transform-style: preserve-3d;
 }
-.card:hover,
 .card.flipped {
   transform: rotateY(180deg);
 }
 .card.added {
   transform: translate(50px);
+}
+.card .side {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 2px; left: 2px; right: 2px; bottom: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card .back {
   background: #47B77E;
@@ -66,15 +73,6 @@
 }
 .card .front {
   transform: rotateY(180deg);
-}
-.card .back, 
-.card .front {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 2px; left: 2px; right: 2px; bottom: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .diamonds  .front:before,
 .diamonds .front:after,
