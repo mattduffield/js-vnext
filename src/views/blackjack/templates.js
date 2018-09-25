@@ -16,8 +16,9 @@ export class Templates {
   }
 
   getCssClass(card) {
-    console.log('isFlipped', this.cards.isFlipped(card));
-    return `card ${card.suit.toLowerCase()} ${this.cards.isFlipped(card) ? 'flipped' : ''}`;
+    // console.log('isFlipped', this.cards.isFlipped(card));
+    return `card ${card.suit.toLowerCase()} ${this.cards.isCardFlipped.get(card) ? 'flipped' : ''}`;
+    // return `card ${card.suit.toLowerCase()} ${this.cards.isCardFlipped.get(card) && 'flipped'}`;
   }
 
   cardTemplate(card) {
